@@ -6,7 +6,7 @@ class Api::BooksController < ApplicationController
 
   def show
     @book = Book.find_by(id: params[:id])
-    
+
     if @book
       render json: @book, status: :ok
     else
@@ -22,7 +22,7 @@ class Api::BooksController < ApplicationController
     if @books.destroy
       render json: { message: 'Book Was deleted successfully' }, status: :ok
     else
-      render json: { message: 'Something went wrong'}, status: :not_found
+      render json: { message: 'Something went wrong' }, status: :not_found
     end
   end
 

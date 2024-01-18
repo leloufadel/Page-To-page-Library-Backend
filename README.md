@@ -6,10 +6,12 @@
 
 # 📗 Table of Contents
 
-- [📗 Table of Contents](#-table-of-contents)
-- [ About the Project](#about-project)
+- [📖 About the Project](#about-project)
 - [🛠 Project Requirements](#project-requirements)
   - [🔗 Integration with Front-End](#integration-with-front-end)
+  - [🛠 Built With](#built-with)
+      - [Tech Stack](#tech-stack) 
+      - [Key Features](#key-features)
   - [📡 API Endpoints](#api-endpoints)
   - [🚀 Live Demo](#live-demo)
   - [💻 Getting Started](#getting-started)
@@ -38,6 +40,35 @@
 ## 🔗 Integration with Front-End <a name="integration-with-front-end"></a>
 
 Here is the link to the [ Front-End ](https://github.com/leloufadel/front-end-capstone)repository.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🛠 Built With <a name="built-with"></a>
+
+### Tech Stack <a name="tech-stack"></a>
+
+<details>
+    <summary>Client</summary>
+    <ul>
+        <li><a href="https://www.w3.org/TR/2011/WD-html5-20110405/">HTML5</a></li>
+        <li><a href="https://www.w3.org/Style/CSS/specs.en.html">CSS</a></li>
+        <li><a href="https://www.ecma-international.org/publications-and-standards/standards/ecma-262/">JavaScript</a></li>
+    </ul>
+</details>
+<details>
+  <summary>Server</summary>
+  <ul>
+    <li><a href="https://www.ruby-lang.org/en/">Ruby</a></li>
+    <li><a href="https://rubyonrails.org/">Ruby on Rails</a></li>
+  </ul>
+</details>
+
+<details>
+  <summary>Database</summary>
+  <ul>
+    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
+  </ul>
+</details>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -128,26 +159,26 @@ The API will be accessible at ``.
 
 👤 **Santiago Ruido**
 
-- GitHub: [@Arch-Noize](https://github.com/Arch-Noize)
-- LinkedIn: [Santiago Ruido](https://www.linkedin.com/in/santiago-ruido-a1404880/)
+- 👤 GitHub: [@Arch-Noize](https://github.com/Arch-Noize)
+- 👤 LinkedIn: [Santiago Ruido](https://www.linkedin.com/in/santiago-ruido-a1404880/)
 
 👤 **Garvin Chimone**
 
-- GitHub: [@Chimoneg27](https://github.com/Chimoneg27)
-- Twitter: [@GarvinChimone](https://twitter.com/GarvinChimone)
-- LinkedIn: [Garvin Chimone](https://www.linkedin.com/in/garvin-chimone-37208924a/)
+- 👤GitHub: [@Chimoneg27](https://github.com/Chimoneg27)
+- 👤Twitter: [@GarvinChimone](https://twitter.com/GarvinChimone)
+- 👤LinkedIn: [Garvin Chimone](https://www.linkedin.com/in/garvin-chimone-37208924a/)
 
 👤 **Aisha Alselwi**
 
-- GitHub:   [Aisha Alselwi](https://github.com/AlselwiAisha)
-- LinkedIn: [Aisha Alselwi](https://www.linkedin.com/in/aisha-alselwi/)
+- 👤GitHub:   [Aisha Alselwi](https://github.com/AlselwiAisha)
+- 👤LinkedIn: [Aisha Alselwi](https://www.linkedin.com/in/aisha-alselwi/)
 
 👤 **Lala Aicha El Vadel**
 
-- [Linked In](https://www.linkedin.com/in/lalaaicha-elvadel/)
-- [GitHub](https://github.com/leloufadel)
-- [WellFound](https://wellfound.com/u/leloufadel)
-- [Twitter](https://twitter.com/leloufadel)
+- 👤LinkedIn: [@Lala Aicha El Vadel](https://www.linkedin.com/in/lalaaicha-elvadel/)
+- 👤GitHub: [@Lala Aicha El Vadel](https://github.com/leloufadel)
+- 👤Wellfound: [@Lala Aicha El Vadel](https://wellfound.com/u/leloufadel)
+- 👤Twitter: [@Lala Aicha El Vadel](https://twitter.com/leloufadel)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

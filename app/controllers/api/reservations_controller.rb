@@ -6,7 +6,7 @@ class Api::ReservationsController < ApplicationController
 
   def create; end
 
-  private
+  private 
 
   def reserveation_params
     params.require(:reservation).permit(:date, :due_date, :city)

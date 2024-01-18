@@ -18,6 +18,8 @@
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
     - [Run the Project](#run-the-project)
+    - [Run the tests](#run-the-tests)
+  - [📋 Kanban Board](#kanban-board) 
   - [👥 Author](#authors)
   - [🔭 Issues](#issues)
   - [🤝 Contributing](#contributing)
@@ -145,7 +147,19 @@ To run the project, execute the following command:
 rails server
 ```
 
-The API will be accessible at ``.
+### Run the tests
+
+To run the tests, execute the following command:
+
+```sh
+rspec
+```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 📋 Kanban Board <a name="kanban-board"></a>
+
+[Project Board](https://github.com/leloufadel/full-stuck-project/projects/1)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

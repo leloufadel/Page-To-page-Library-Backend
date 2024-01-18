@@ -4,10 +4,9 @@ class Api::ReservationsController < ApplicationController
     render json: @reservations
   end
 
-  def create
-  end
+  def create; end
 
-  private 
+  private
 
   def reserveation_params
     params.require(:reservation).permit(:date, :due_date, :city)

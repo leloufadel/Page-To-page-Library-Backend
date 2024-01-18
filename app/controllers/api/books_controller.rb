@@ -4,16 +4,13 @@ class Api::BooksController < ApplicationController
     render json: @books
   end
 
-  def show
-  end
+  def show; end
 
-  def create
-  end
+  def create; end
 
-  def destroy
-  end
+  def destroy; end
 
-  private 
+  private
 
   def book_params
     params.require(:book).permit(:name, :cover_photo, :author, :publisher, :publish_date)

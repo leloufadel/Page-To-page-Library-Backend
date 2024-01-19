@@ -6,8 +6,13 @@ default: &default
 development:
   <<: *default
   database: full_stuck_project_development
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
   username: postgres
-  password: sadaf313
+  password: garvin27
+  host: localhost
+  port: 5432
 
 test:
   <<: *default

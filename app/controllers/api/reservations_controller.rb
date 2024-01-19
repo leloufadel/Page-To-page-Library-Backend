@@ -4,16 +4,16 @@ class Api::ReservationsController < ApplicationController
     render json: @reservations
   end
 
-  def create 
+  def create
     @reservation = Reservation.new(reservation_params)
     if @reservation.save
-      render json: @reservation, status: :created, api_reservation_url(@reservation)
+      render json: @reservation, status: :created, location: api_reservation_url(@reservation)
     else
       render json: @reservation.errors, status: :unprocessable_entity
     end
   end
 
-  private 
+  private
 
   def reserveation_params
     params.require(:reservation).permit(:date, :due_date, :city)

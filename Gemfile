@@ -68,4 +68,6 @@ group :test do
   gem 'selenium-webdriver'
 end
 
+gem 'rswag-api'
+gem 'rswag-ui'
 gem 'rubocop', '>= 1.0', '< 2.0'

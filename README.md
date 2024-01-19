@@ -13,6 +13,7 @@
       - [Tech Stack](#tech-stack) 
       - [Key Features](#key-features)
   - [📡 API Endpoints](#api-endpoints)
+    - [API Documentation](#api-documentation)
   - [🚀 Live Demo](#live-demo)
   - [💻 Getting Started](#getting-started)
     - [Prerequisites](#prerequisites)
@@ -92,6 +93,10 @@ Here is the link to the [ Front-End ](https://github.com/leloufadel/front-end-ca
 ## 📡 API Endpoints <a name="api-endpoints"></a>
 
 | Endpoint | Method | Description |
+
+### API Documentation <a name="api-documentation"></a>
+
+Link to the [API Documentation](http://127.0.0.1:3000/api-docs/index.html)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

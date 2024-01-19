@@ -1,11 +1,13 @@
 class Api::ReservationsController < ApplicationController
   def index
-    @reservations = User.reservations.build
+    @user = User.find(params[:user_id])
+    @reservations = @user.reservations
     render json: @reservations
   end
 
   def create
-    @reservation = Reservation.new(reservation_params)
+    @user = User.find(params[:user_id])
+    @reservation = @user.reservations.build(reservation_params)
     if @reservation.save
       render json: @reservation, status: :created, location: api_reservation_url(@reservation)
     else
@@ -15,7 +17,7 @@ class Api::ReservationsController < ApplicationController
 
   private
 
-  def reserveation_params
+  def reservation_params
     params.require(:reservation).permit(:date, :due_date, :city)
   end
 end

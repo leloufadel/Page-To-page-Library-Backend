@@ -25,6 +25,7 @@ gem 'stimulus-rails'
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem 'jbuilder'
+
 gem 'rack-cors'
 
 # Use Redis adapter to run Action Cable in production
@@ -67,6 +68,8 @@ group :test do
   gem 'selenium-webdriver'
 end
 
+gem 'rswag-api'
+gem 'rswag-ui'
 gem 'rubocop', '>= 1.0', '< 2.0'
 
 gem 'devise'

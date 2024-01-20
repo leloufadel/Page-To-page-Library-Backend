@@ -14,7 +14,15 @@ class Api::BooksController < ApplicationController
     end
   end
 
-  def create; end
+  def create
+    @book = Book.new(book_params)
+
+    if @book.save
+      render json: @book, status: :created, location: api_book_url(@book)
+    else
+      render json: @book.errors, status: :unprocessable_entity
+    end
+  end
 
   def destroy
     @books = Book.find_by(id: params[:id])

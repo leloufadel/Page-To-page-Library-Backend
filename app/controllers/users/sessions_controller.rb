@@ -9,10 +9,11 @@ class Users::SessionsController < Devise::SessionsController
     if current_user
       render json: {
         message: 'You are logged in.',
-        user: current_user
+        user: current_user,
+        loading: true
       }, status: :ok
     else
-      render json: { message: 'Authentication failed.' }, status: :unauthorized
+      render json: { message: 'Authentication failed.', loading: false }, status: :unauthorized
     end
   end
 

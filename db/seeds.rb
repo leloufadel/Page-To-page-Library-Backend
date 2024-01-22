@@ -1,3 +1,5 @@
+User.create(name: "Sadaf", password:"654321",email:"sadaf@gmail.com")
+User.create(name: "Garvin", password:"123456",email:"abc@gmail.com")
 Book.create(name: "The Alchemist", 
             cover_photo:"test.png", 
             author:"THE Author", 
@@ -20,3 +22,8 @@ Book.create(name: "The Doctor",
             category:"Fiction", 
             info:"This is a testing side of info")
 Reservation.create(date: "2000-10-19", due_date: "2000-10-29", city: "Caracas", user_id: 1)
+
+book = Book.first
+reservation = Reservation.first
+
+BookReservation.create(book: book, reservation: reservation)

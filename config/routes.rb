@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   }
   get '/member-data', to: 'members#show'
 
-  post '/verify', to: 'users#verify'
+  post '/verify', to: 'members#verify'
 
   mount Rswag::Ui::Engine => '/api-docs'
   mount Rswag::Api::Engine => '/api-docs'

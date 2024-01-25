@@ -111,6 +111,10 @@ GEM
     devise-jwt (0.11.0)
       devise (~> 4.0)
       warden-jwt_auth (~> 0.8)
+    dotenv (2.8.1)
+    dotenv-rails (2.8.1)
+      dotenv (= 2.8.1)
+      railties (>= 3.2)
     drb (2.2.0)
       ruby2_keywords
     dry-auto_inject (1.0.1)
@@ -311,6 +315,7 @@ DEPENDENCIES
   debug
   devise
   devise-jwt
+  dotenv-rails
   importmap-rails
   jbuilder
   pg (~> 1.1)

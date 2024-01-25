@@ -1,5 +1,6 @@
 class MembersController < ApplicationController
   before_action :authenticate_user!
+  skip_before_action :authenticate_user!, only: :verify
 
   def show
     user = gt_user_from_token

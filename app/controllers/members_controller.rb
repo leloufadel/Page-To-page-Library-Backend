@@ -6,13 +6,13 @@ class MembersController < ApplicationController
     user = gt_user_from_token
     render json: {
       message: "If you see this, you're in!",
-      user:
+      user: user
     }
   end
 
   def verify
-    user = gt_user_from_token
-    if params[:pass] == user.encrypted_password
+    user = User.find(params[:id])
+    if user.valid_password?(params[:password])
       user.update(role: 'admin')
       render json: { status: 'success' }
     else

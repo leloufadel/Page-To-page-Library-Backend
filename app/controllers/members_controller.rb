@@ -6,7 +6,7 @@ class MembersController < ApplicationController
     user = gt_user_from_token
     render json: {
       message: "If you see this, you're in!",
-      user: user
+      user:
     }
   end
 

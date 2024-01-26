@@ -25,12 +25,17 @@ class Api::BooksController < ApplicationController
   end
 
   def destroy
-    @books = Book.find_by(id: params[:id])
+    @book = Book.find_by(id: params[:id])
 
-    if @books.destroy
+    if @book
+      @book.reservations.each do |reservation|
+        reservation.books.delete(@book)
+        reservation.destroy if reservation.books.empty?
+      end
+      @book.destroy
       render json: { message: 'Book Was deleted successfully' }, status: :ok
     else
-      render json: { message: 'Something went wrong' }, status: :not_found
+      render json: { message: 'Book not found' }, status: :not_found
     end
   end
 

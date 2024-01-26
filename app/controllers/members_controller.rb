@@ -11,12 +11,12 @@ class MembersController < ApplicationController
   end
 
   def verify
-    user = User.find(params[:id])
-    if user.valid_password?(params[:password])
+    user = gt_user_from_token
+    if user
       user.update(role: 'admin')
-      render json: { status: 'success' }
+      render json: { message: 'Successfully verified your user' }, status: :ok
     else
-      render json: { status: 'error' }, status: :unauthorized
+      render json: { message: 'Incorrect token or unauthorized user' }, status: :unauthorized
     end
   end
 

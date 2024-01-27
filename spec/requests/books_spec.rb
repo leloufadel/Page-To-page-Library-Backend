@@ -2,15 +2,15 @@
 require 'rails_helper'
 
 RSpec.describe 'Api::BooksController', type: :request do
-    before(:example) do
-        @book = Book.create(id:1, name: 'The Doctor',
-                             cover_photo: 'test2.png',
-                             author: 'THE Medic',
-                             publisher: 'One',
-                             publish_date: '2021-01-01',
-                             category: 'Fiction',
-                             info: 'This is a testing side of info')
-       end
+  before(:example) do
+    @book = Book.create(id: 1, name: 'The Doctor',
+                        cover_photo: 'test2.png',
+                        author: 'THE Medic',
+                        publisher: 'One',
+                        publish_date: '2021-01-01',
+                        category: 'Fiction',
+                        info: 'This is a testing side of info')
+  end
   describe 'GET /api/books' do
     it 'returns a list of books' do
       get '/api/books'

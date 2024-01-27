@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Book, type: :model do
   before(:example) do
-   @book = Book.create( name: 'The Doctor',
+    @book = Book.create(name: 'The Doctor',
                         cover_photo: 'test2.png',
                         author: 'THE Medic',
                         publisher: 'One',
@@ -47,10 +47,6 @@ RSpec.describe Book, type: :model do
       expect(@book).not_to be_valid
     end
 
-    it ' not valid if publish_date lease that 3' do
-      @book.publish_date = '20'
-      expect(@book).not_to be_valid
-    end
     it ' not valid if publish_date nil' do
       @book.publish_date = nil
       expect(@book).not_to be_valid

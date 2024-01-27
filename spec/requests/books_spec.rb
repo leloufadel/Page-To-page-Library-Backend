@@ -3,7 +3,7 @@ require 'rails_helper'
 
 RSpec.describe 'Api::BooksController', type: :request do
     before(:example) do
-        @book = Book.create( name: 'The Doctor',
+        @book = Book.create(id:1, name: 'The Doctor',
                              cover_photo: 'test2.png',
                              author: 'THE Medic',
                              publisher: 'One',

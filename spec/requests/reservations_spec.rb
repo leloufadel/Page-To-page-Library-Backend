@@ -10,25 +10,25 @@ RSpec.describe 'Api::ReservationsController', type: :request do
     @book_reservation1 = BookReservation.create(book: @book1, reservation: @reservation)
     @book_reservation2 = BookReservation.create(book: @book2, reservation: @reservation)
   end
-
-  describe 'GET /api/reservations/:user_id' do
+  describe 'GET /api/reservations?user_id=id' do
     it 'returns a list of reservations for a user' do
-      get "/api/reservations/1"  
+      get "/api/reservations?user_id=#{@user.id}"  
       expect(response).to have_http_status(:ok)
     end
   end
 
-#   describe 'POST /api/reservations/:user_id' do
-#     it 'creates a new reservation' do
-#       post "/api/reservations/#{@user.id}", params: { reservation_id: @reservation.id, book_ids: [@book1.id, @book2.id] } 
-#       expect(response).to have_http_status(:created)
-#       expect(JSON.parse(response.body)['date']).to eq(@reservation.date)
-#     end
+  describe 'POST/api/reservations/user_id=id' do
+    it 'creates a new reservation' do  
+      post "/api/reservations?user_id=#{@user.id}", params: { reservation: {reservation_id: @reservation.id}, book_ids: [@book1.id, @book2.id] } 
+      expect(response).to have_http_status(:created)
+      # expect(JSON.parse(response.body)['date']).to eq(@reservation.date)
+    end
 
-#     it 'returns errors for invalid reservation creation' do
-#       post "/api/reservations/#{@user.id}", params: { reservation: { date: '' }, book_ids: [@book1.id, @book2.id] } 
-#       expect(response).to have_http_status(:unprocessable_entity)
-#       expect(JSON.parse(response.body)).to have_key('date')
-#     end
-#   end
+    it 'returns errors for invalid reservation creation' do
+      post "/api/reservations?user_id=#{@user.id}", params: { reservation: { date: '' }, book_ids: [@book1.id, @book2.id] } 
+      expect(response).to have_http_status(:unprocessable_entity)
+      expect(JSON.parse(response.body)).to have_key('date')
+    end
+  end
+
 end

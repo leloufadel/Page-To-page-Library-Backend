@@ -17,7 +17,7 @@ RSpec.describe 'Api::ReservationsController', type: :request do
     end
   end
 
-  describe 'POST/api/reservations/user_id=id' do
+  describe 'POST/api/reservations?user_id=id' do
     it 'creates a new reservation' do  
       post "/api/reservations?user_id=#{@user.id}", params: { reservation: {reservation_id: @reservation.id}, book_ids: [@book1.id, @book2.id] } 
       expect(response).to have_http_status(:created)

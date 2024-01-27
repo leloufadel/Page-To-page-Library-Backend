@@ -3,7 +3,7 @@ class Reservation < ApplicationRecord
   has_many :book_reservations
   has_many :books, through: :book_reservations
 
-  validates :date, presence: true, length: { minimum: 3 }
+  validates :date, presence: true
   validates :city, presence: true, length: { minimum: 3 }
-  validates :due_date, presence: true, length: { minimum: 3 }
+  validates :due_date, presence: true
 end

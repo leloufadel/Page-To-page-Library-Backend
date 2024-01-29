@@ -48,35 +48,35 @@ paths:
                 date: "2023-06-11"
                 due_date: "2023-06-21"
                 city: "Windhoek"
-                user_id: 1
+              book_ids: [1, 2]
       responses:
         '201':
           description: Created
+
   /api/books:
     get:
-      summary: Get all books
+      summary: Get a book by ID
+      parameters:
+        - name: book_id
+          in: query
+          required: true
+          schema:
+            type: integer
       responses:
         '200':
           description: Successful response
           content:
             application/json:
               example:
-                - id: 2
-                  name: "Blood and Fire"
-                  cover_photo: "https://za.pinterest.com/pin/612559986839781601/"
-                  author: "George R.R. Martin"
-                  publisher: "Harper Voyager"
-                  publish_date: "2002-05-28"
-                  created_at: "2024-01-18T18:22:09.857Z"
-                  updated_at: "2024-01-18T18:22:09.857Z"
-                - id: 3
-                  name: "GameofThrones"
-                  cover_photo: "https://za.pinterest.com/pin/273945589806066227/"
-                  author: "GeorgeR.R.Martin"
-                  publisher: "HarperVoyager"
-                  publish_date: "2001-05-05"
-                  created_at: "2024-01-19T10:03:02.730Z"
-                  updated_at: "2024-01-19T10:03:02.730Z"
+                id: 2
+                name: "Blood and Fire"
+                cover_photo: "https://za.pinterest.com/pin/612559986839781601/"
+                author: "George R.R. Martin"
+                publisher: "Harper Voyager"
+                publish_date: "2002-05-28"
+                created_at: "2024-01-18T18:22:09.857Z"
+                updated_at: "2024-01-18T18:22:09.857Z"
+
     post:
       summary: Create a book
       requestBody:
@@ -87,13 +87,32 @@ paths:
                 name: "The Complete Book Of Zen"
                 cover_photo: "https://za.pinterest.com/pin/273945589806066227/"
                 author: "Wong Kiew Kit"
+                category: "Philosophy"
+                info: "A comprehensive guide to Zen philosophy."
                 publisher: "Vermillion"
                 publish_date: "1998-11-11"
       responses:
         '201':
           description: Created
+      security:
+        - jwtAuth: []
+
     delete:
       summary: Delete a book by ID
+      parameters:
+        - name: book_id
+          in: query
+          required: true
+          schema:
+            type: integer
       responses:
         '204':
           description: No Content
+      security:
+        - jwtAuth: []
+
+securitySchemes:
+  jwtAuth:
+    type: http
+    scheme: bearer
+    bearerFormat: JWT

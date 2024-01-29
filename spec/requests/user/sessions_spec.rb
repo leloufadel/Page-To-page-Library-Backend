@@ -16,7 +16,7 @@ RSpec.describe 'Users::Sessions', type: :request do
     end
     context 'with invalid credentials' do
       it 'responds with unauthorized' do
-        post '/users/sign_in', params: { user: { email: 'test@example.com', password: 'password' } }, as: :json
+        post '/users/sign_in', params: { user: { email: 'sadaf313@example.com', password: '123456' } }, as: :json
         expect(response).to have_http_status(:unauthorized)
       end
     end

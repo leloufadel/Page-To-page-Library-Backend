@@ -1,5 +1,6 @@
 class MembersController < ApplicationController
   before_action :authenticate_user!
+  skip_before_action :authenticate_user!, only: :verify
 
   def show
     user = gt_user_from_token
@@ -7,6 +8,16 @@ class MembersController < ApplicationController
       message: "If you see this, you're in!",
       user:
     }
+  end
+
+  def verify
+    user = gt_user_from_token
+    if user
+      user.update(role: 'admin')
+      render json: { message: 'Successfully verified your user' }, status: :ok
+    else
+      render json: { message: 'Incorrect token or unauthorized user' }, status: :unauthorized
+    end
   end
 
   private

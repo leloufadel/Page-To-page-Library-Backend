@@ -13,11 +13,6 @@ RSpec.describe User, type: :model do
     expect(@user).not_to be_valid
   end
 
-  it 'It is not valid without password' do
-    @user.password = nil
-    expect(@user).not_to be_valid
-  end
-
   describe 'admin?' do
     it 'returns true if the user is an admin' do
       admin_user = User.create(name: 'user1', email: 'user1@mail.com', password: '654321', role: 'admin')

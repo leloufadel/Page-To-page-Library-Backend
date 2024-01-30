@@ -6,5 +6,5 @@ class Book < ApplicationRecord
   validates :cover_photo, presence: true, length: { minimum: 3 }
   validates :author, presence: true, length: { minimum: 3 }
   validates :publisher, presence: true, length: { minimum: 3 }
-  validates :publish_date, presence: true, length: { minimum: 3 }
+  validates :publish_date, presence: true
 end

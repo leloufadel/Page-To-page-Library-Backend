@@ -1,6 +1,6 @@
 <div align="center">
 
-  <h2><b>Project name</b></h2>
+  <h2><b>📖Book Library Reservation</b></h2>
 
 </div>
 
@@ -30,7 +30,9 @@
 
 <!-- PROJECT REQUIREMENTS -->
 
-# Project name <a name="about-project"></a>
+# Book Library Reservation <a name="about-project"></a>
+
+This project is a Book Library Reservation API. It is a RESTful API that allows users to reserve books from a library. It is built with Ruby on Rails and PostgreSQL. It is a capstone project for the Microverse Full-Stack Development Program.
 
 ## 🛠 Project Requirements <a name="project-requirements"></a>
 

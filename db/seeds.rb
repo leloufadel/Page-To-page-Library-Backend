@@ -1,5 +1,5 @@
-User.create(name: "Sadaf", password:"654321",email:"sadaf@gmail.com")
-User.create(name: "Garvin", password:"123456",email:"abc@gmail.com")
+User.create(name: "Sadaf", password:"654321",email:"sadaf@gmail.com",role:'admin')
+User.create(name: "Garvin", password:"123456",email:"abc@gmail.com",role:'admin')
 Book.create(name: "The Alchemist", 
             cover_photo:"test.png", 
             author:"THE Author", 

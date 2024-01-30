@@ -1,4 +1,3 @@
-# app/controllers/users/sessions_controller.rb
 class Users::SessionsController < Devise::SessionsController
   before_action :authenticate_user!
   respond_to :json

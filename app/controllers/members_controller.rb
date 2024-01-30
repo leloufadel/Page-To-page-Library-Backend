@@ -10,20 +10,10 @@ class MembersController < ApplicationController
     }
   end
 
-  # def verify
-  #   user = gt_user_from_token
-  #   if user
-  #     user.update(role: 'admin')
-  #     render json: { message: 'Successfully verified your user' }, status: :ok
-  #   else
-  #     render json: { message: 'Incorrect token or unauthorized user' }, status: :unauthorized
-  #   end
-  # end
-
   def update_role
     user = gt_user_from_token
     if user.role == 'admin'
-      user_update = User.find(params[:email])
+      user_update = User.find_by(email: params[:email])
       user_update.update(role: 'admin')
       render json: { message: 'Successfully updated user role' }, status: :ok
     else

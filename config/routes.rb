@@ -6,8 +6,6 @@ Rails.application.routes.draw do
   }
   get '/member-data', to: 'members#show'
 
-  # post '/verify', to: 'members#verify'
-
   post '/update', to: 'members#update_role'
 
   mount Rswag::Ui::Engine => '/api-docs'

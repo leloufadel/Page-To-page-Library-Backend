@@ -44,7 +44,7 @@ This project is a Book Library Reservation API. It is a RESTful API that allows 
 
 ## 🔗 Integration with Front-End <a name="integration-with-front-end"></a>
 
-Here is the link to the [ Front-End ](https://github.com/leloufadel/front-end-capstone)repository.
+Here is the link to the [ Front-End ](https://github.com/leloufadel/Page-To-page-Library-Frontend)repository.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -128,8 +128,8 @@ In order to run this project you need:
 Clone this repository to your desired folder:
 
 ```sh
-git clone https://github.com/leloufadel/full-stuck-project.git
-cd full-stuck-project
+git clone https://github.com/leloufadel/Page-To-page-Library-Backend.git
+cd Page-To-page-Library-Backend
 ```
 
 Install gem dependencies:
@@ -166,7 +166,7 @@ rspec
 
 ## 📋 Kanban Board <a name="kanban-board"></a>
 
-[Project Board](https://github.com/leloufadel/full-stuck-project/projects/1)
+[Project Board](https://github.com/leloufadel/Page-To-page-Library-Backend/projects/1)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -215,13 +215,13 @@ Upcoming improvements:
 
 ## 🔭 Issues <a name="issues"></a>
 
-Find a bug or have a feature request? [Open a new issue](https://github.com/leloufadel/full-stuck-project/issues) here on GitHub.
+Find a bug or have a feature request? [Open a new issue](https://github.com/leloufadel/Page-To-page-Library-Backend/issues) here on GitHub.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🤝 Contributing <a name="contributing"></a>
 
-Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/leloufadel/full-stuck-project/issues).
+Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/leloufadel/Page-To-page-Library-Backend/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

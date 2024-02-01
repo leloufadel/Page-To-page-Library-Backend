@@ -104,7 +104,7 @@ Link to the [API Documentation](http://127.0.0.1:3000/api-docs/index.html)
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-[Here](https://page-to-page.onrender.com/mainpage) you can find a live demo of our frontend, that is using our own Library API (which you can also find [here](https://library-api-f7m3.onrender.com)!
+[Here](https://page-to-page.onrender.com/) you can find a live demo of our frontend, that is using our own Library API (which you can also find [here](https://library-api-f7m3.onrender.com/api-docs)!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

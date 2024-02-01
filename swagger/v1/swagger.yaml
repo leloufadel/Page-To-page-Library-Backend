@@ -1,0 +1,118 @@
+openapi: 3.1.0
+info:
+  title: Page To Page Library API
+  version: 1.0.0
+paths:
+  /api/reservations:
+    get:
+      summary: Get reservations by user ID
+      parameters:
+        - name: user_id
+          in: query
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              example:
+                - id: 1
+                  date: "2023-04-11"
+                  due_date: "2023-04-21"
+                  city: "Cape Town"
+                  created_at: "2024-01-19T10:43:51.075Z"
+                  updated_at: "2024-01-19T10:43:51.075Z"
+                  user_id: 1
+                - id: 2
+                  date: "2023-04-11"
+                  due_date: "2023-04-21"
+                  city: "Cape Town"
+                  created_at: "2024-01-19T10:45:40.470Z"
+                  updated_at: "2024-01-19T10:45:40.470Z"
+                  user_id: 1
+    post:
+      summary: Create a reservation
+      parameters:
+        - name: user_id
+          in: query
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        content:
+          application/json:
+            example:
+              reservation:
+                date: "2023-06-11"
+                due_date: "2023-06-21"
+                city: "Windhoek"
+              book_ids: [1, 2]
+      responses:
+        '201':
+          description: Created
+
+  /api/books:
+    get:
+      summary: Get a book by ID
+      parameters:
+        - name: book_id
+          in: query
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              example:
+                id: 2
+                name: "Blood and Fire"
+                cover_photo: "https://za.pinterest.com/pin/612559986839781601/"
+                author: "George R.R. Martin"
+                publisher: "Harper Voyager"
+                publish_date: "2002-05-28"
+                created_at: "2024-01-18T18:22:09.857Z"
+                updated_at: "2024-01-18T18:22:09.857Z"
+
+    post:
+      summary: Create a book
+      requestBody:
+        content:
+          application/json:
+            example:
+              book:
+                name: "The Complete Book Of Zen"
+                cover_photo: "https://za.pinterest.com/pin/273945589806066227/"
+                author: "Wong Kiew Kit"
+                category: "Philosophy"
+                info: "A comprehensive guide to Zen philosophy."
+                publisher: "Vermillion"
+                publish_date: "1998-11-11"
+      responses:
+        '201':
+          description: Created
+      security:
+        - jwtAuth: []
+
+    delete:
+      summary: Delete a book by ID
+      parameters:
+        - name: book_id
+          in: query
+          required: true
+          schema:
+            type: integer
+      responses:
+        '204':
+          description: No Content
+      security:
+        - jwtAuth: []
+
+securitySchemes:
+  jwtAuth:
+    type: http
+    scheme: bearer
+    bearerFormat: JWT
